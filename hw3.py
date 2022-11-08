@@ -4,7 +4,7 @@
 
 class RainfallTable:
 
-    def __init__(self, filename):
+    def __init__(self, filename="njrainfall.txt"):
         file = open(filename, 'r')
         rain = {}
         for line in file:
@@ -171,7 +171,7 @@ class RainfallTable:
         return result
 
 #table = RainfallTable("njrainfall.txt") # used this line to test on my PC, original is below
-table = RainfallTable("../../data/njrainfall.txt")
+table = RainfallTable("njrainfall.txt")
 print(table.get_rainfall(1993, 6))
 print(table.get_average_rainfall_for_month(6))
 
